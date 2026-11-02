@@ -1,0 +1,6 @@
+plt.figure(figsize=(8, 4))
+sns.violinplot(data=df, y='常温拉伸_YS(MPa)', color='lightgreen', inner='quartile')
+plt.title('Yield Strength Distribution')
+plt.ylabel('Yield Strength (MPa)')
+plt.tight_layout()
+plt.show()
