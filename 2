@@ -1,0 +1,13 @@
+from pathlib import Path
+import pandas as pd
+
+csv_path = Path('NS800_805.csv')
+df = pd.read_csv(csv_path, encoding='utf-8-sig')
+
+print(f'文件：{csv_path.resolve()}')
+print(f'数据规模：{df.shape[0]:,} 行 × {df.shape[1]} 列')
+print('字段名：')
+print(df.columns.tolist())
+print('\n数据类型与非空数量：')
+df.info()
+df.head()
