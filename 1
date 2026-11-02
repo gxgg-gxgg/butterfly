@@ -1,0 +1,31 @@
+import pandas as pd
+import numpy as np
+
+# 1. 读取钢材数据
+df = pd.read_csv('NS800_805.csv')
+
+# 2. 查看前5行
+display(df.head())
+
+# 3. 查看所有列名
+print(df.columns.tolist())
+
+# 4. 查看数据基本信息
+df.info()
+
+# 5. 查看每列的平均值
+print(df.mean().round(2))
+
+# 6. 查看数据统计情况
+display(df.describe())
+
+# 7. 筛选抗拉强度大于850的数据
+display(df[df['常温拉伸_TS(MPa)'] > 850])
+
+# 8. 计算抗拉强度平均值
+print("抗拉强度平均值：",
+      df['常温拉伸_TS(MPa)'].mean())
+
+# 9. 计算屈服强度平均值
+print("屈服强度平均值：",
+      df['常温拉伸_YS(MPa)'].mean())
