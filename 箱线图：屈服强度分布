@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_theme(style='whitegrid')
+
+plt.figure(figsize=(8, 4))
+sns.boxplot(data=df, y='常温拉伸_YS(MPa)', color='skyblue')
+plt.title('Yield Strength Distribution')
+plt.ylabel('Yield Strength (MPa)')
+plt.tight_layout()
+plt.show()
