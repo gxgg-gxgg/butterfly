@@ -1,0 +1,7 @@
+plt.figure(figsize=(7, 5))
+sns.scatterplot(data=df, x='常温拉伸_YS(MPa)', y='常温拉伸_TS(MPa)', alpha=.65)
+plt.title('Yield Strength vs Tensile Strength')
+plt.xlabel('Yield Strength (MPa)')
+plt.ylabel('Tensile Strength (MPa)')
+plt.tight_layout()
+plt.show()
